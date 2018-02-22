@@ -37,7 +37,9 @@ public class MergeSort<T extends Comparable> implements SortingAlgorithm<T> {
 
                     //Add the lower item to the sortedSublist
                     //or take the last one that is left
-                    if (list.get(i).size() != 0 && (list.get(i + 1).size() == 0 || list.get(i).getFirst().compareTo(list.get(i + 1).getFirst()) < 0)) {
+                    if (list.get(i).size() != 0 &&
+                            (list.get(i + 1).size() == 0 || list.get(i).getFirst().compareTo(list.get(i + 1).getFirst()) < 0))
+                    {
                         sortedSublist.add(list.get(i).getFirst());
                         list.get(i).removeFirst();
                     } else {
