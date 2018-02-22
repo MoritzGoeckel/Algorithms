@@ -1,9 +1,6 @@
 package Tests;
 
-import Implementation.InsertionSort;
-import Implementation.SelectionSort;
-import Implementation.Shuffle;
-import Implementation.SortingAlgorithm;
+import Implementation.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -32,7 +29,7 @@ class SortingTest {
     }
 
     @ParameterizedTest
-    @ValueSource(classes = {SelectionSort.class, InsertionSort.class})
+    @ValueSource(classes = {SelectionSort.class, InsertionSort.class, MergeSort.class})
     void testSort(Class<? extends SortingAlgorithm> algorithm) throws IllegalAccessException, InstantiationException {
         //Create list with numbers
         Integer[] list = new Integer[100];

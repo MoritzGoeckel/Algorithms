@@ -3,7 +3,7 @@
 - [x] Shuffle
 - [x] Insertion sort
 - [ ] Quick sort
-- [ ] Merge sort
+- [x] Merge sort
 - [x] Selection Sort
 
 ## Path finding
