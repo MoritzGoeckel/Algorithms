@@ -29,7 +29,7 @@ class SortingTest {
     }
 
     @ParameterizedTest
-    @ValueSource(classes = {SelectionSort.class, InsertionSort.class, MergeSort.class, QuickSort.class})
+    @ValueSource(classes = {SelectionSort.class, InsertionSort.class, MergeSort.class, QuickSort.class, BubbleSort.class})
     void testSort(Class<? extends SortingAlgorithm> algorithm) throws IllegalAccessException, InstantiationException {
         //Create list with numbers
         Integer[] list = new Integer[100];

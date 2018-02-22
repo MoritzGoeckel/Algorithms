@@ -1,9 +1,10 @@
 # Algorithms
 ## Sorting
 - [x] Insertion sort
-- [ ] Quick sort
+- [x] Quick sort
 - [x] Merge sort
 - [x] Selection Sort
+- [x] Bubble sort
 - [x] Shuffle
 
 ## Path finding
