@@ -14,7 +14,7 @@
 - [ ] Spanning tree
 
 ## Optimization
-- [ ] Genetic
+- [x] Genetic
 - [ ] Monte Carlo
 
 ## Numbers
