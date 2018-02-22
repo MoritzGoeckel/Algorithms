@@ -1,6 +1,6 @@
 package Tests;
 
-import Implementation.Random;
+import Numerics.Random;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

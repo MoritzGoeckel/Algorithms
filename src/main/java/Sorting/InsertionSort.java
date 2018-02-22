@@ -1,4 +1,4 @@
-package Implementation;
+package Sorting;
 
 public class InsertionSort<T extends Comparable> implements SortingAlgorithm<T> {
 

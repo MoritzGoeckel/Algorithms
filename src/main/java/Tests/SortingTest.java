@@ -1,6 +1,6 @@
 package Tests;
 
-import Implementation.*;
+import Sorting.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -40,15 +40,15 @@ class SortingTest {
         SortingAlgorithm<Integer> shuffler = new Shuffle<Integer>();
         shuffler.sort(list);
 
-        System.out.println("");
+        /*System.out.println("");
         System.out.println("Algorithm: \t" + algorithm.getSimpleName());
-        System.out.println("Unsorted: \t" + Arrays.toString(list));
+        System.out.println("Unsorted: \t" + Arrays.toString(list));*/
 
         //Sort the list
         SortingAlgorithm<Integer> sorter = algorithm.newInstance();
         sorter.sort(list);
 
-        System.out.println("Sorted: \t" + Arrays.toString(list));
+        //System.out.println("Sorted: \t" + Arrays.toString(list));
 
         //Check if sorted
         for(int i = 0; i < list.length; i++)

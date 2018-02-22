@@ -1,4 +1,4 @@
-package Implementation;
+package Numerics;
 
 public class Random {
 

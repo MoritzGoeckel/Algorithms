@@ -1,4 +1,4 @@
-package Implementation;
+package Sorting;
 
 public class BubbleSort<T extends Comparable> implements SortingAlgorithm<T> {
 
