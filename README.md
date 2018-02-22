@@ -1,10 +1,10 @@
 # Algorithms
 ## Sorting
 - [x] Shuffle
-- [x] Insertion Sort
-- [ ] Quicksort
-- [ ] Selection Sort
+- [x] Insertion sort
+- [ ] Quick sort
 - [ ] Merge sort
+- [ ] Selection Sort
 
 ## Path finding
 - [ ] A*
@@ -17,7 +17,7 @@
 - [ ] Monte Carlo
 
 ## Numbers
-- [ ] Random
+- [x] Random
 - [ ] Perlin Noise
 - [ ] Pi
 - [ ] Prime
@@ -31,11 +31,11 @@
 - [ ] Factorial
 - [ ] Breadth-first search
 - [ ] Euclid
-- [ ] Fourier / Fast Fourier Transform
+- [ ] Fourier
 - [ ] Lossless compression
 - [ ] Clustering
 - [ ] Regression
 - [ ] Bloom Filter
 
-
+## List of algorithms
 https://en.wikipedia.org/wiki/List_of_algorithms
