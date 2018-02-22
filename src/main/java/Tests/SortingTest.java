@@ -1,15 +1,17 @@
 package Tests;
 
 import Implementation.InsertionSort;
+import Implementation.SelectionSort;
 import Implementation.Shuffle;
 import Implementation.SortingAlgorithm;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 class SortingTest {
 
@@ -25,26 +27,33 @@ class SortingTest {
         SortingAlgorithm<Integer> shuffler = new Shuffle<Integer>();
         shuffler.sort(list);
 
-        //Compare
+        //Check if shuffled
         assertNotEquals(beforeShuffle, Arrays.toString(list));
     }
 
-    @Test
-    void testSort(){
+    @ParameterizedTest
+    @ValueSource(classes = {SelectionSort.class, InsertionSort.class})
+    void testSort(Class<? extends SortingAlgorithm> algorithm) throws IllegalAccessException, InstantiationException {
+        //Create list with numbers
         Integer[] list = new Integer[100];
         for(int i = 0; i < list.length; i++)
             list[i] = i;
 
+        //Shuffle the list
         SortingAlgorithm<Integer> shuffler = new Shuffle<Integer>();
         shuffler.sort(list);
 
-        //System.out.println("Unsorted: \t" + Arrays.toString(list));
+        System.out.println("");
+        System.out.println("Algorithm: \t" + algorithm.getSimpleName());
+        System.out.println("Unsorted: \t" + Arrays.toString(list));
 
-        SortingAlgorithm<Integer> sorter = new InsertionSort<Integer>();
+        //Sort the list
+        SortingAlgorithm<Integer> sorter = algorithm.newInstance();
         sorter.sort(list);
 
-        //System.out.println("Sorted: \t" + Arrays.toString(list));
+        System.out.println("Sorted: \t" + Arrays.toString(list));
 
+        //Check if sorted
         for(int i = 0; i < list.length; i++)
             assertEquals(new Integer(i), list[i]);
     }

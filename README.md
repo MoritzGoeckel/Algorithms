@@ -4,7 +4,7 @@
 - [x] Insertion sort
 - [ ] Quick sort
 - [ ] Merge sort
-- [ ] Selection Sort
+- [x] Selection Sort
 
 ## Path finding
 - [ ] A*
