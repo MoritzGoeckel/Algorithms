@@ -2,6 +2,6 @@ package Optimization;
 
 import java.util.Random;
 
-public interface MutationFunction{
-    double[] mutateFeatures(double[] features, Random rng);
+public interface MutationFunction<DNAType>{
+    DNAType mutate(DNAType dna, Random rng);
 }

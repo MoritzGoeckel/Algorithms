@@ -1,5 +1,5 @@
 package Optimization;
 
-public interface FitnessFunction{
-    double estimateFitness(double[] features);
+public interface FitnessFunction<FITNESSType extends Comparable, DNAType>{
+    FITNESSType estimateFitness(DNAType dna);
 }

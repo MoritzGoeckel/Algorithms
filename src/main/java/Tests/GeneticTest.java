@@ -1,24 +1,19 @@
 package Tests;
 
-import Optimization.CreationFunction;
-import Optimization.FitnessFunction;
 import Optimization.GeneticOptimizer;
-import Optimization.MutationFunction;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
-public class GeneticTest {
+class GeneticTest {
 
     @Test
     void geneticTest(){
 
-        GeneticOptimizer optimizer = new GeneticOptimizer(
+        GeneticOptimizer<double[], Double> optimizer = new GeneticOptimizer<>(
                 (rng) -> (new double[]{rng.nextDouble(), rng.nextDouble(), rng.nextDouble()}),
                 (features) -> (features[0] + features[1] - features[2]),
                 (features, rng) -> (
