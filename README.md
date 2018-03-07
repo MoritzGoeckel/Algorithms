@@ -7,12 +7,6 @@
 - [x] Bubble sort
 - [x] Shuffle
 
-## Path finding
-- [ ] A*
-- [ ] Bellman Ford
-- [ ] Dijkstra
-- [ ] Spanning tree
-
 ## Optimization
 - [x] Genetic
 - [ ] Monte Carlo
@@ -24,6 +18,12 @@
 - [ ] Perlin noise
 - [ ] Pi
 - [ ] Equation solver
+
+## Path finding
+- [ ] A*
+- [ ] Bellman Ford
+- [ ] Dijkstra
+- [ ] Spanning tree
 
 ## Cryptography
 - [ ] Sha-1
