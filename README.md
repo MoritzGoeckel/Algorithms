@@ -22,6 +22,8 @@
 - [ ] Perlin Noise
 - [ ] Pi
 - [ ] Prime
+- [ ] Equation Solver
+- [x] Mandelbrot
 
 ## Cryptography
 - [ ] Sha-1
