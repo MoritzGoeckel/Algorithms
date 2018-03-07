@@ -7,15 +7,20 @@ public class FindPrime {
     public static Integer[] getPrimes(int end){
         LinkedList<Integer> primes = new LinkedList<>();
 
-        Integer[] allNumbesr = new Integer[end + 1];
-        for(int i = 0; i < allNumbesr.length; i++)
-            allNumbesr[i] = i;
+        //Filling array with numbers
+        Integer[] allNumbers = new Integer[end + 1];
+        for(int i = 0; i < allNumbers.length; i++)
+            allNumbers[i] = i;
 
-        for(int number = 2; number < allNumbesr.length; number++){
-            if(allNumbesr[number] != null) {
+        //Starting with 2
+        for(int number = 2; number < allNumbers.length; number++){
+            if(allNumbers[number] != null) {
+                //Found a prime
                 primes.add(number);
-                for (int toRemove = 0; toRemove < allNumbesr.length; toRemove += number)
-                    allNumbesr[toRemove] = null;
+
+                //Removing multiples of primes
+                for (int toRemove = 0; toRemove < allNumbers.length; toRemove += number)
+                    allNumbers[toRemove] = null;
             }
         }
 
