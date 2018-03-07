@@ -19,11 +19,11 @@
 
 ## Numbers
 - [x] Random
-- [ ] Perlin Noise
-- [ ] Pi
-- [ ] Prime
-- [ ] Equation Solver
+- [x] Find primes
 - [x] Mandelbrot
+- [ ] Perlin noise
+- [ ] Pi
+- [ ] Equation solver
 
 ## Cryptography
 - [ ] Sha-1
