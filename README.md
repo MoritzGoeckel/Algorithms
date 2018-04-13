@@ -15,6 +15,7 @@
 - [x] Random
 - [x] Find primes
 - [x] Mandelbrot
+- [x] Newton's Method
 - [ ] Perlin noise
 - [ ] Pi
 - [ ] Equation solver

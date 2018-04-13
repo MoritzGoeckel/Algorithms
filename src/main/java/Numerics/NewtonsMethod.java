@@ -19,4 +19,8 @@ public class NewtonsMethod {
 
         return x;
     }
+
+    public static double findValue(double value, Function<Double, Double> f, double start, double delta, int iterations){
+        return findZero(x -> f.apply(x) - value, start, delta, iterations);
+    }
 }
