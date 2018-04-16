@@ -20,7 +20,9 @@
 - [ ] Pi
 - [ ] Equation solver
 
-## Path finding
+## Graphs
+- [x] Breadth-first search
+- [x] Depth-first search
 - [ ] A*
 - [ ] Bellman Ford
 - [ ] Dijkstra
@@ -33,7 +35,6 @@
 ## More
 - [ ] Binary Search
 - [ ] Factorial
-- [ ] Breadth-first search
 - [ ] Euclid
 - [ ] Fourier
 - [ ] Lossless compression
