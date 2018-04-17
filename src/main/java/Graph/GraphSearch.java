@@ -5,14 +5,17 @@ import java.util.function.Predicate;
 
 public class GraphSearch {
 
-    public static void breadthFirstSearch(GraphNode start, Predicate<GraphNode> markOperation){
+    public static Map<GraphNode, Integer> breadthFirstSearch(GraphNode start, Predicate<GraphNode> markOperation){
         Set<GraphNode> visitedNodes = new HashSet<>();
         Stack<GraphNode> queue = new Stack<>();
+        Map<GraphNode, Integer> distances = new HashMap<>();
+
         queue.push(start);
+        distances.put(start, 0);
 
         visitedNodes.add(start);
         if(!markOperation.test(start))
-            return;
+            return distances;
 
         while (!queue.empty()){
             GraphNode node = queue.pop();
@@ -21,17 +24,24 @@ public class GraphSearch {
                 if(!visitedNodes.contains(neighbour)) {
                     queue.push(e.getDestinationNode());
                     visitedNodes.add(neighbour);
+
+                    distances.put(neighbour, distances.get(node) + 1);
+
                     if (!markOperation.test(neighbour))
-                        return;
+                        return distances;
                 }
             }
         }
+
+        return distances;
     }
 
     public static void depthFirstSearch(GraphNode start, Predicate<GraphNode> markOperation){
         Set<GraphNode> visitedNodes = new HashSet<>();
         Stack<GraphNode> queue = new Stack<>();
+
         queue.push(start);
+
         while (!queue.empty()){
             GraphNode node = queue.pop();
             if(!visitedNodes.contains(node)){

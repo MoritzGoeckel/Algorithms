@@ -34,4 +34,9 @@ public class GraphNode {
 
         return ((GraphNode) obj).getId() == getId();
     }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
