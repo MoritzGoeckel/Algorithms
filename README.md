@@ -18,7 +18,7 @@
 - [x] Newton's method
 - [ ] Perlin noise
 - [ ] Pi
-- [ ] Equation solver
+- [ ] Gaus solver
 
 ## Graphs
 - [x] Breadth-first search
